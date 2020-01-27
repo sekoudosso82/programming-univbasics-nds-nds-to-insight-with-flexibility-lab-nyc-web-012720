@@ -62,8 +62,6 @@ end
 
 
 def movies_with_directors_set(source)
-  # puts "********* source"
-  #         puts source[0]  
   
   index = 0
   director_array = []
