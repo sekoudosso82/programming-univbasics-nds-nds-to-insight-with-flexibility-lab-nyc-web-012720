@@ -30,17 +30,13 @@ end
 
 
 def movies_with_director_key(name, movies_collection)
- 
   index = 0 
   result = []
-  
   while index < movies_collection.length do 
     result.push(movie_with_director_name(name,movies_collection[index]))
     index += 1 
   end
- 
   result
-  
 end
 
 def gross_per_studio(collection)
@@ -59,17 +55,13 @@ def gross_per_studio(collection)
         end
     i += 1
   end
-
   result
 
-  
 end
 
 
 
 def movies_with_directors_set(source)
-  # puts "********* source"
-  #         puts source[0]  
   
   index = 0
   director_array = []
@@ -77,27 +69,18 @@ def movies_with_directors_set(source)
 
     while index < source.length do
           name = (source[index][:name])
-          
           movie_index = 0 
           movie = (source[index][:movies])
-          
           while movie_index<movie.length do
             movie[movie_index][:director_name] = name 
             movie_index +=1
           end 
-         
           director_array[index] =  movie
-          
-          
           index += 1
     end
-
   director_array
-  
-
+ 
 end
-
-
 
 def studios_totals(nds)
   a_o_a_movies_with_director_names = movies_with_directors_set(nds)
